@@ -67,7 +67,12 @@
 
     async function sendMsg() {
       await liff.sendMessages([
-        {
+          {
+            "type": "sticker",
+            "stickerId": 1,
+            "packageId": 1
+          }
+        /*{
           "type": "flex",
           "altText": "Flex Message",
           "contents": {
@@ -183,7 +188,7 @@
               ]
             }
           }
-        }
+        }*/
       ])
     }
 
