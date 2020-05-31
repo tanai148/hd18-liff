@@ -66,12 +66,16 @@
     }
 
     async function sendMsg() {
-      await liff.sendMessages([
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
           {
             "type": "sticker",
             "stickerId": 1,
             "packageId": 1
           }
+        ])
+        alert("Message sent")
+      }
         /*{
           "type": "flex",
           "altText": "Flex Message",
