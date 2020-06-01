@@ -69,9 +69,121 @@
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
           {
-            "type": "sticker",
-            "stickerId": 1,
-            "packageId": 1
+            "type": "flex",
+            "altText": "Flex Message",
+            "contents": {
+              "type": "bubble",
+              "hero": {
+                "type": "image",
+                "url": "https://huaydee.com/wp-content/uploads/2020/01/ยี่กี-1.jpg",
+                "size": "full",
+                "aspectRatio": "1.91:1",
+                "aspectMode": "cover"
+              },
+              "body": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "md",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "SUPER ยี่กี",
+                    "size": "xl",
+                    "weight": "bold"
+                  },
+                  {
+                    "type": "box",
+                    "layout": "horizontal",
+                    "spacing": "sm",
+                    "contents": [
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "3 ตัวบน",
+                            "flex": 0,
+                            "margin": "sm",
+                            "align": "center",
+                            "weight": "bold"
+                          },
+                          {
+                            "type": "text",
+                            "text": "233",
+                            "size": "sm",
+                            "align": "center",
+                            "color": "#AAAAAA"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "2 ตัว",
+                            "flex": 0,
+                            "margin": "sm",
+                            "align": "center",
+                            "weight": "bold"
+                          },
+                          {
+                            "type": "text",
+                            "text": "45",
+                            "size": "sm",
+                            "align": "center",
+                            "color": "#AAAAAA"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "รูด",
+                            "flex": 0,
+                            "margin": "sm",
+                            "align": "center",
+                            "weight": "bold"
+                          },
+                          {
+                            "type": "text",
+                            "text": "9",
+                            "size": "sm",
+                            "align": "center",
+                            "color": "#AAAAAA"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "contents": [
+                  {
+                    "type": "spacer",
+                    "size": "xxl"
+                  },
+                  {
+                    "type": "button",
+                    "action": {
+                      "type": "uri",
+                      "label": "แทงเลย",
+                      "uri": "https://play.huaydee.com"
+                    },
+                    "color": "#905C44",
+                    "style": "primary"
+                  }
+                ]
+              }
+            }
           }
         ])
         alert("Message sent")
