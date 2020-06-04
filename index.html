@@ -314,6 +314,8 @@
 
     function getContext() {
       if (liff.getContext() != null) {
+        console.log("context")
+        console.log(liff.getContext())
         document.getElementById("type").append(liff.getContext().type)
         document.getElementById("viewType").append(liff.getContext().viewType)
         document.getElementById("utouId").append(liff.getContext().utouId)
