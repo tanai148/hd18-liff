@@ -206,6 +206,7 @@
     }
 
     function getFlexMsg() {
+      
       if (count == 0) {
         count += 1;
         return {
@@ -213,7 +214,17 @@
           "text": "Hello from liff"
         }
       }
+      if (count == 1) {
+        count += 1;
+        return {
+          "type": "image",
+          "originalContentUrl": "https://medias.thansettakij.com/images/2016/08/24/1551364972_87619.jpg",
+          "previewImageUrl": "https://medias.thansettakij.com/images/2016/08/24/1551364972_87619.jpg",
+          "animated": false
+        }
+      }
 
+      count += 1;
       return {
         "type": "flex",
         "altText": "Flex Message",
