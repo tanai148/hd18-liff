@@ -188,10 +188,12 @@
     async function getFriendship() {
     }
 
+    int count = 0;
     async function sendMsg() {
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
           getFlexMsg()
+          
         ])
         .then(() => {
           console.log('message sent');
@@ -204,6 +206,14 @@
     }
 
     function getFlexMsg() {
+      if (count == 0) {
+        count += 1;
+        return {
+          "type": "text",
+          "text": "Hello from liff"
+        }
+      }
+
       return {
         "type": "flex",
         "altText": "Flex Message",
