@@ -214,13 +214,33 @@
           "text": "Hello from liff"
         }
       }
-      if (count == 1) {
+      else if (count == 1) {
         count += 1;
         return {
           "type": "image",
           "originalContentUrl": "https://medias.thansettakij.com/images/2016/08/24/1551364972_87619.jpg",
           "previewImageUrl": "https://medias.thansettakij.com/images/2016/08/24/1551364972_87619.jpg",
           "animated": false
+        }
+      }
+      else if (count == 2) {
+        count += 1;
+        return {
+          "type": "template",
+          "altText": "this is a buttons template",
+          "template": {
+            "type": "buttons",
+            "actions": [
+              {
+                "type": "uri",
+                "label": "แทงเลย",
+                "uri": "https://play.huaydee.com"
+              }
+            ],
+            "thumbnailImageUrl": "https://huaydee.com/wp-content/uploads/2020/01/ยี่กี-1.jpg",
+            "title": "ยี่กี",
+            "text": "3 ตัว 333 456 789"
+          }
         }
       }
 
