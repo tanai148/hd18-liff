@@ -62,8 +62,11 @@
     }
 
     function scanCode() {
-      console.log("redirect to http://play.huaydee.com/line/t/thai")
+      console.log("redirect to " + window.location.href)
       //window.location.replace("http://play.huaydee.com/line/t/thai");
+      const urlParams = new URLSearchParams(window.location.href);
+      const myParam = urlParams.get('myParam');
+      console.log("param : " + myParam)
     }
 
     function openWindow() {
