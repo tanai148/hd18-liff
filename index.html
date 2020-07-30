@@ -67,6 +67,7 @@
       const urlParams = new URLSearchParams(window.location.href);
       const myParam = urlParams.get('myParam');
       console.log("param : " + myParam)
+      window.location.replace(myParam);
     }
 
     function openWindow() {
