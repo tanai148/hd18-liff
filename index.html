@@ -95,11 +95,12 @@
       const urlParams = new URLSearchParams(window.location.href);
       const myParam = urlParams.get('myParam');
       console.log("param : " + myParam)
+      window.location.href = myParam;
       // window.location.replace(myParam);
-      liff.openWindow({
-        url: myParam,
-        external: false
-      });
+      // liff.openWindow({
+      //  url: myParam,
+      //  external: false
+      // });
     }
 
     function getFlexMsg() {
