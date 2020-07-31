@@ -62,12 +62,7 @@
     }
 
     function scanCode() {
-      console.log("redirect to " + window.location.href)
-      //window.location.replace("http://play.huaydee.com/line/t/thai");
-      const urlParams = new URLSearchParams(window.location.href);
-      const myParam = urlParams.get('myParam');
-      console.log("param : " + myParam)
-      window.location.replace(myParam);
+      openUrl();
     }
 
     function openWindow() {
@@ -92,6 +87,19 @@
         })
         alert("Message sent")
       }
+    }
+
+    function openUrl() {
+      console.log("redirect to " + window.location.href)
+      //window.location.replace("http://play.huaydee.com/line/t/thai");
+      const urlParams = new URLSearchParams(window.location.href);
+      const myParam = urlParams.get('myParam');
+      console.log("param : " + myParam)
+      // window.location.replace(myParam);
+      liff.openWindow({
+        url: myParam,
+        external: false
+      });
     }
 
     function getFlexMsg() {
