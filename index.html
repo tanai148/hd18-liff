@@ -1,6 +1,8 @@
 
 <script>
-  const urlParams = new URLSearchParams(window.location.href);
+  const queryString = decodeURIComponent(window.location.search).replace("?liff.state=", "");
+  const urlParams = new URLSearchParams(queryString);
+  //const urlParams = new URLSearchParams(window.location.href);
   const myParam = urlParams.get('myParam');
   //console.log("param : " + myParam)
   window.location.assign(myParam);
