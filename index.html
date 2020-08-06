@@ -1,50 +1,11 @@
 <!DOCTYPE html>
 <html>
-
-<body>
   
+<script>
+  const urlParams = new URLSearchParams(window.location.href);
+  const myParam = urlParams.get('myParam');
+  //console.log("param : " + myParam)
+  window.location.assign(myParam);
+</script>
 
-  <script src="js/vconsole.min.js"></script>
-  <script>
-    var vConsole = new VConsole()
-    console.log("Hello World!")
-  </script>
-  
-  <script>
-    function openUrl() {
-      console.log("redirect to " + window.location.href)
-      //window.location.replace("http://play.huaydee.com/line/t/thai");
-      const urlParams = new URLSearchParams(window.location.href);
-      const myParam = urlParams.get('myParam');
-      console.log("param : " + myParam)
-      window.location.assign(myParam);
-      // window.location.href = myParam;
-      // window.location.replace(myParam);
-      // liff.openWindow({
-      //  url: myParam,
-      //  external: false
-      // });
-    }
-
-    async function main() {
-      openUrl()
-      /*alert("LINE Developers x Skooldio")
-      liff.ready.then(() => {
-        document.getElementById("isLoggedIn").append(liff.isLoggedIn())
-        if (liff.isLoggedIn()) {
-          getEnvironment()
-          getUserProfile()
-          getContext()
-          openUrl()
-        } else {
-          liff.login()
-        }
-      })
-      await liff.init({ liffId: "1654173662-Nyq5dzEx" })*/
-      
-
-    }
-    main()
-  </script>
-</body>
 </html>
