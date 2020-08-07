@@ -8,7 +8,14 @@
   console.log("param : " + myParam)
   const playLine = 'http://play.huaydee.com/line/';
   if (myParam != null && myParam != '') {
-    window.location.assign(playLine + myParam);
+    if (myParam == "f/joker") {
+      window.location.assign('http://play.huaydee.com/line/f/joker');
+    } else if (myParam == "s/dowjones") {
+      window.location.assign('http://play.huaydee.com/line/s/dowjones');
+    } else {
+      window.location.assign(playLine + myParam);
+    }
+    
   } else {
     window.location.assign("https://play.huaydee.com");
   }
