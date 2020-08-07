@@ -6,8 +6,8 @@
   //const urlParams = new URLSearchParams(window.location.href);
   const myParam = urlParams.get('myParam');
   console.log("param : " + myParam)
-  if (myParam != null) {
-    window.location.assign(myParam);
+  if (myParam != null && myParam != '') {
+    window.location.assign("http://play.huaydee.com/line/" + myParam);
   } else {
     window.location.assign("https://play.huaydee.com");
   }
